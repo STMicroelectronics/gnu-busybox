@@ -1,0 +1,4 @@
+len=80
+name=`printf '%*s' "$len" | tr ' ' "1"`
+busybox mkdir -p $name/$name/$name/$name
+test -d $name/$name/$name/$name

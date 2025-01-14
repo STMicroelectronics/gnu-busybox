@@ -1,0 +1,7 @@
+len=`expr 248 - $(pwd | wc -c)`
+dirname=`printf '%*s' "$len" | tr ' ' "1"`
+len=80
+name=`printf '%*s' "$len" | tr ' ' "2"`
+busybox mkdir -p $dirname/$name/$name/$name/$name
+busybox rmdir -p $dirname/$name/$name/$name/$name
+test ! -d $dirname/$name/$name/$name/$name
